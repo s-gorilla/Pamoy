@@ -31,49 +31,58 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 <body>
   <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="pt-3 custom_nav-container navbar navbar-expand-lg">
-          <a class="mr-5 navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="">
-            <span>
-              Fregg
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex flex-column flex-lg-row align-items-center ml-auto">
-              <ul class="navbar-nav">
-                <li class="active nav-item">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="service.html"> Service </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact us</a>
-                </li>
-              </ul>
-              <form class="form-inline">
-                <button class="my-2 my-sm-0 nav_search-btn btn" type="submit"></button>
-              </form>
+    <!-- header section starts -->
+    <section id="home" class="home_section">
+      <header class="header_section">
+        <div class="container">
+          <nav class="pt-3 custom_nav-container navbar navbar-expand-lg">
+            <a class="mr-5 navbar-brand" href="#home">
+              <img src="images/LOGO FIX.pdf.png" alt="Logo PT.LINGGA PRABA NUSANTARA">
+              <span>PT.LINGGA PRABA NUSANTARA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex flex-column flex-lg-row align-items-center ml-auto">
+                <ul class="navbar-nav">
+                  <!-- Link to Home Section -->
+                  <li class="active nav-item">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <!-- Link to About Section -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <!-- Link to Service Section -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">Service</a>
+                  </li>
+                  <!-- Link to Contact Section -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact us</a>
+                  </li>
+                </ul>
+                <!-- Optional Search Button -->
+                <form class="form-inline">
+                  <button class="my-2 my-sm-0 nav_search-btn btn" type="submit"></button>
+                </form>
+              </div>
             </div>
-          </div>
-        </nav>
-      </div>
-    </header>
+          </nav>
+        </div>
+      </header>
+    </section>
     <!-- end header section -->
+
+
     <!-- slider section -->
     <section class="position-relative slider_section">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -82,25 +91,18 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
         </ol>
         <div class="carousel-inner">
+          <!-- Slide 1 -->
           <div class="active carousel-item">
             <div class="container">
               <div class="row">
                 <div class="col-md-7">
                   <div class="detail-box">
                     <div>
-                      <h1>
-                        Welcome To <br>
-                        <span>
-                          Content Writing Services
-                        </span>
-                      </h1>
-                      <p>
-                        It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking
-                      </p>
+                      <h1>Welcome to<br><span>PT. LINGGA PRABA NUSANTARA</span></h1>
+                      <p>Mewujudkan konsep-konsep strategis dan sistematis sejalan dengan keinginan pelanggan di bidang digital advertising dan transportasi.</p>
                       <div class="btn-box">
-                        <a href="" class="btn-1">
-                          Contact Us
+                        <a href="#contact" class="btn-1">
+                          Get in Touch
                         </a>
                       </div>
                     </div>
@@ -109,6 +111,7 @@
               </div>
             </div>
           </div>
+          <!-- Slide 2 -->
           <div class="carousel-item">
             <div class="container">
               <div class="row">
@@ -116,18 +119,17 @@
                   <div class="detail-box">
                     <div>
                       <h1>
-                        Welcome To <br>
+                        Leading the Way in <br>
                         <span>
-                          Content Writing Services
+                          Digital Transformation
                         </span>
                       </h1>
                       <p>
-                        It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking
+                        Kami menyediakan solusi digital inovatif yang menyederhanakan operasi, meningkatkan keterlibatan pelanggan, dan memberikan hasil nyata.
                       </p>
                       <div class="btn-box">
-                        <a href="" class="btn-1">
-                          Contact Us
+                        <a href="#services" class="btn-1">
+                          Our Services
                         </a>
                       </div>
                     </div>
@@ -150,169 +152,142 @@
     <!-- end slider section -->
   </div>
 
-  <!-- about section -->
-
-  <section class="about_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About Us
-              </h2>
-            </div>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making it look like readable English. Many
-              desktop publishing packages and web page editors now use Lorem Ipsum as their
-            </p>
-            <a href="">
-              Get Started
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end about section -->
-  <div class="body_bg layout_padding">
-
-    <!-- service section -->
-
-    <section class="service_section">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            At Your Service
-          </h2>
-        </div>
-      </div>
+    <!-- about section -->
+    <section id="about" class="about_section layout_padding">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/s-1.png" alt="">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>
+                  Tentang Kami
+                </h2>
               </div>
-              <h4>
-                Written with Love
-              </h4>
-              <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of
-                letters, as opposed to using 'Content here, content t,
+              <p>Kami adalah perusahaan di bidang penyedia jasa konsultan dan komersil, memiliki SDM yang ahli, berpengalaman serta bekerjasama dengan partnership yang handal dan profesional.</p>
+              <p>Visi: Mertha Amertaning Tri Bhuwana</p>
+              <p>Misi: 
+                <ul>
+                  <li>Mewujudkan konsep-konsep strategis dan sistematis sejalan dengan keinginan pelanggan</li>
+                  <li>Menyelesaikan proyek pembangunan di instansi pemerintah & swasta di bidang digital advertising</li>
+                  <li>Membuat aplikasi berbasis teknologi, sistem informasi, dan transportasi yang berkelanjutan</li>
+                  <li>Menciptakan hubungan kerja sama yang kuat dengan pelanggan & mitra kerja</li>
+                  <li>Menjaga keseimbangan lingkungan dengan memperhatikan dampak lingkungan & sosial</li>
+                </ul>
               </p>
-              <a href="">
-                Read More
+
+              <a href="#contact">
+                Get Started
               </a>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="text-right align-items-end align-items-md-start text-md-left box">
-              <div class="img-box">
-                <img src="images/s-2.png" alt="">
-              </div>
-              <h4>
-                Fast Turnaround
-              </h4>
-              <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of
-                letters, as opposed to using 'Content here, content here', making it look like
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/s-3.png" alt="">
-              </div>
-              <h4>
-                Up to Date
-              </h4>
-              <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of
-                letters, as opposed to using 'Content here, content here', making it look like now use Lorem Ipsum as
-                their default model text,
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="text-right align-items-end align-items-md-start text-md-left box">
-              <div class="img-box">
-                <img src="images/s-4.png" alt="">
-              </div>
-              <h4>
-                Premium Content
-              </h4>
-              <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when
-                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-                of
-                letters, as opposed to using 'Content here, content here', making it look like
-              </p>
-              <a href="">
-                Read More
-              </a>
+            <div class="img-box">
+              <img src="images/about-us-digital-consulting.png" alt="Digital Consulting">
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- end about section -->
+    <div class="body_bg layout_padding">
 
-    <!-- end service section -->
-
-    <!-- quote section -->
+      <section id="services" class="service_section">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="heading_container">
+            <h2>
+              Siap Melayani Anda
+            </h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <!-- Service 1: Jasa Konsultansi dan Komersil -->
+            <div class="col-md-6">
+              <div class="text-right align-items-end align-items-md-start text-md-left box">
+                <div class="img-box">
+                  <img src="images/digital-strategy.png" alt="Digital Strategy Consulting" height="100">
+                </div>
+                <h4>Jasa Konsultansi dan Komersil (Digitalisasi dan Transportasi)</h4>
+                <p>Menyediakan layanan konsultasi dan jasa digitalisasi dalam bidang transportasi serta teknologi komersial.</p>
+              </div>
+            </div>
+            <!-- Service 2: Layanan Videotron -->
+            <div class="col-md-6">
+              <div class="text-right align-items-end align-items-md-start text-md-left box">
+                <div class="img-box">
+                  <img src="images/technology-integration.png" alt="Technology Integration" height="100">
+                </div>
+                <h4>Layanan Videotron</h4>
+                <p>Penyewaan dan pemasangan videotron untuk kebutuhan komersial dan pemerintah.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Service 3: Layanan Lampu Penerangan Jalan -->
+            <div class="col-md-6">
+              <div class="text-right align-items-end align-items-md-start text-md-left box">
+                <div class="img-box">
+                  <img src="images/data-insights.png" alt="Data-Driven Insights" height="100">
+                </div>
+                <h4>Layanan Lampu Penerangan Jalan</h4>
+                <p>Instalasi dan perawatan lampu penerangan jalan.</p>
+              </div>
+            </div>
+            <!-- Service 4: Reparasi Komputer & Instalasi Listrik -->
+            <div class="col-md-6">
+              <div class="text-right align-items-end align-items-md-start text-md-left box">
+                <div class="img-box">
+                  <img src="images/software-development.png" alt="Custom Software Development" height="100">
+                </div>
+                <h4>Reparasi Komputer & Instalasi Listrik</h4>
+                <p>Jasa perbaikan komputer dan instalasi listrik profesional.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Service 5: Pelayanan dan Pengadaan Jasa Lainnya -->
+            <div class="col-md-12">
+              <div class="container center-content text-center">
+                <div class="img-box">
+                  <img src="images/other-services.png" alt="Pelayanan dan Pengadaan Jasa Lainnya" height="100">
+                </div>
+                <h4>Pelayanan dan Pengadaan Jasa Lainnya</h4>
+                <p>Pengadaan ATK, komputer, AC, dan layanan terkait lainnya.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <section class="layout_padding quote_section">
       <div class="container">
         <div class="box">
           <div class="detail-box">
             <h3>
-              Get Your Quote Today!
+              Siap Mengembangkan Bisnis Anda?
             </h3>
             <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page
+              Hubungi kami sekarang untuk mendapatkan penawaran khusus terkait proyek digitalisasi, transportasi, atau layanan lainnya. Kami siap membantu Anda menciptakan inovasi dan mencapai pertumbuhan yang berkelanjutan.
             </p>
           </div>
           <div class="btn-box">
-            <a href="">
-              Get A Quote
+            <a href="#contact">
+              Dapatkan Penawaran
             </a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- end quote section -->
+    </section>    
 
 
     <!-- contact section -->
 
-    <section class="contact_section">
+    <section id="contact" class="contact_section">
       <div class="container">
         <div class="heading_container">
           <h2>
-            Let's Get In Touch!
+            Hubungi Kami
           </h2>
         </div>
       </div>
@@ -322,18 +297,17 @@
             <div class="contact_form">
               <form id="contact-form"> <!-- id contact-form -->
                 <input type="text" placeholder="Nama Lengkap" required id="nama"> <!-- id nama -->
-                <input type="text" placeholder="Barang" required id="barang"> <!-- id barang -->
-                <!-- <input type="email" placeholder="Email kayaknya ga perlu di perlukan karena otomatis ngambil di akun crhome yg sedang login" required id="email"> -->
-                <input type="text" placeholder="Message" class="message_input" id="deskripsi"> 
+                <input type="email" placeholder="Email" required id="email"> <!-- id email -->
+                <input type="text" placeholder="Pesan" class="message_input" id="deskripsi"> 
                 <button>
-                  Send
+                  Kirim
                 </button>
               </form>
             </div>
           </div>
           <div class="col-md-6">
             <div class="img-box">
-              <img src="images/contact-img.jpg" alt="">
+              <img src="images/contact-img.jpg" alt="Kontak PT LINGGA PRABA NUSANTARA">
             </div>
           </div>
         </div>
@@ -343,12 +317,11 @@
     <!-- end contact section -->
 
     <!-- client section -->
-
     <section class="layout_padding-top client_section">
       <div class="d-flex justify-content-center">
         <div class="heading_container">
           <h2>
-            Testimonial
+            Apa Kata Klien Kami
           </h2>
         </div>
       </div>
@@ -360,19 +333,20 @@
             <li data-target="#carouselExample2Indicators" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner">
-            <div class="carousel-item">
+            <!-- Testimonial 1 -->
+            <div class="carousel-item active">
               <div class="client_container">
                 <div class="client-id">
                   <div class="img-box">
-                    <img src="images/client.jpg" alt="">
+                    <img src="https://www.kemendag.go.id/pejabat/3F6vZ2KTAZeblTAjy5eWbg2hacogcAgAJnfWv4DY.jpg" alt="Foto Klien">
                   </div>
                   <div class="client_name">
                     <div>
                       <h3>
-                        Johndue
+                        Budi Santoso
                       </h3>
                       <p>
-                        Farm & CO
+                        PT. Teknologi Inovasi
                       </p>
                     </div>
                   </div>
@@ -381,28 +355,27 @@
                   <div class="client_text">
                     <blockquote>
                       <p>
-                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                        “Tim PT. LINGGA PRABA NUSANTARA memberikan solusi inovatif yang membantu kami meningkatkan efisiensi operasional. Profesionalisme mereka sungguh luar biasa!”
                       </p>
                     </blockquote>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="active carousel-item">
+            <!-- Testimonial 2 -->
+            <div class="carousel-item">
               <div class="client_container">
                 <div class="client-id">
                   <div class="img-box">
-                    <img src="images/client.jpg" alt="">
+                    <img src="https://womenunlimited.id/images/photo-1672383185.7531.jpeg" alt="Foto Klien">
                   </div>
                   <div class="client_name">
                     <div>
                       <h3>
-                        Johndue
+                        Siti Aminah
                       </h3>
                       <p>
-                        Farm & CO
+                        CV. Solusi Cerdas
                       </p>
                     </div>
                   </div>
@@ -411,28 +384,27 @@
                   <div class="client_text">
                     <blockquote>
                       <p>
-                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                        “Kami sangat puas dengan pendekatan strategis dan layanan yang diberikan. Kolaborasi dengan PT. LINGGA PRABA NUSANTARA telah membawa pertumbuhan signifikan bagi perusahaan kami.”
                       </p>
                     </blockquote>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- Testimonial 3 -->
             <div class="carousel-item">
               <div class="client_container">
                 <div class="client-id">
                   <div class="img-box">
-                    <img src="images/client.jpg" alt="">
+                    <img src="https://infopemilu.kpu.go.id/dct/berkas-silon/calon/149490/pas_foto/1683633667_9bed0533-a884-42c6-ad9b-861c2bfc648e.jpeg" alt="Foto Klien">
                   </div>
                   <div class="client_name">
                     <div>
                       <h3>
-                        Johndue
+                        Agus Priyanto
                       </h3>
                       <p>
-                        Farm & CO
+                        PT. Global Perkasa
                       </p>
                     </div>
                   </div>
@@ -441,9 +413,7 @@
                   <div class="client_text">
                     <blockquote>
                       <p>
-                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                        “Layanan dari PT. LINGGA PRABA NUSANTARA sangat profesional dan sesuai kebutuhan kami. Kami merekomendasikan mereka untuk proyek digitalisasi dan infrastruktur.”
                       </p>
                     </blockquote>
                   </div>
@@ -452,84 +422,91 @@
             </div>
           </div>
         </div>
-
       </div>
-    </section>
-
-
+    </section>    
     <!-- end client section -->
 
   </div>
-  <!-- info section -->
-
   <section class="info_section layout_padding">
     <div class="footer_contact">
       <div class="heading_container">
         <h2>
-          Contact Us
+          Hubungi Kami
         </h2>
       </div>
       <div class="box">
-        <a href="" class="img-box">
-          <img src="images/location.png" alt="" class="img-1">
-          <img src="images/location-o.png" alt="" class="img-2">
+        <!-- Lokasi -->
+        <a href="https://maps.google.com/?q=PT+LINGGA+PRABA+NUSANTARA" target="_blank" class="img-box">
+          <img src="images/location.png" alt="Ikon Lokasi" class="img-1">
+          <img src="images/location-o.png" alt="Ikon Lokasi Outline" class="img-2">
         </a>
-        <a href="" class="img-box">
-          <img src="images/call.png" alt="" class="img-1">
-          <img src="images/call-o.png" alt="" class="img-2">
+        
+        <!-- Telepon -->
+        <a href="tel:+628123456789" class="img-box">
+          <img src="images/call.png" alt="Ikon Telepon" class="img-1">
+          <img src="images/call-o.png" alt="Ikon Telepon Outline" class="img-2">
         </a>
-        <a href="" class="img-box">
-          <img src="images/envelope.png" alt="" class="img-1">
-          <img src="images/envelope-o.png" alt="" class="img-2">
+        
+        <!-- Email -->
+        <a href="mailto:info@linggaprabanusantara.com" class="img-box">
+          <img src="images/envelope.png" alt="Ikon Email" class="img-1">
+          <img src="images/envelope-o.png" alt="Ikon Email Outline" class="img-2">
         </a>
       </div>
     </div>
+  </section>  
 
-
-  </section>
-
-
-  <!-- end info section -->
-
-  <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      Copyright &copy; 2019 All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
+      Copyright &copy; 2024 All Rights Reserved By
+      <a href="https://linggaprabanusantara.com">PT. LINGGA PRABA NUSANTARA</a>
     </p>
   </section>
-  <!-- footer section -->
+  
   <script>
     document.getElementById("contact-form").addEventListener("submit", function (event) {
-      // subject/judul email
-      let subject = "Pesanan SIAntar"
-
-      let nama = document.getElementById("nama").value
-      let barang = document.getElementById("barang").value
-      let deskripsi = document.getElementById("deskripsi").value
-
-      let garis_baru = "%0D%0A"
-
-      // ini adalah template, garis baru dan spasi banyak di belakang akan otomatis di format
-      let message = `Saya 
-      Nama Pembeli: ${nama} 
-      Barang : ${barang} 
+      event.preventDefault(); // Prevent default form submission
       
-      ${deskripsi}
-      `
-
-      // ini akan mengformat garis baru dan spasi yang ada di belakang garis baru
-      message = message.replace(/\n  +/g, '\n');
-      message = message.replace(/(?:\r\n|\r|\n)/g, garis_baru);
-
-
-      // email tujuan
-      let email_tujuan = "a156b4ky0229@bangkit.academy"
-
-      // buka tab baru dengan url
-      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email_tujuan}&su=${subject} Pembelian barang COD&body=${message}`);
-    })
+      // Subjek baru untuk email
+      let subject = "Permintaan Informasi Layanan Konsultansi dan Komersial";
+      
+      // Ambil nilai input
+      let nama = document.getElementById("nama").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let deskripsi = document.getElementById("deskripsi").value.trim();
+      
+      // Validasi input
+      if (!nama || !email || !deskripsi) {
+        alert("Harap isi semua kolom yang diperlukan.");
+        return;
+      }
+      
+      // Format untuk garis baru dalam body email
+      let garis_baru = "%0D%0A";
+      
+      // Pesan email dalam Bahasa Indonesia
+      let message = `Halo,
+      Nama saya ${nama}, dan saya tertarik dengan layanan perusahaan Anda. Berikut adalah detail saya:
+      Email: ${email}
+      Pertanyaan: ${deskripsi}
+      Saya ingin mengetahui lebih lanjut mengenai layanan berikut:
+      1. Jasa Konsultansi dan Komersial (Digitalisasi dan Transportasi)
+      2. Layanan Videotron
+      3. Layanan Lampu Penerangan Jalan
+      4. Reparasi Komputer & Instalasi Listrik
+      5. Layanan Lainnya (ATK, komputer, AC, dll.)
+      Mohon berikan informasi lebih lanjut secepatnya. Terima kasih!
+      Hormat saya,
+      ${nama}`;
+      
+      // Update alamat email tujuan
+      let email_tujuan = "a156b4ky0229@bangkit.academy";
+      
+      // Buka Gmail di tab baru dengan template email yang sudah diperbarui
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email_tujuan}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`);
+    });
   </script>
+  
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>

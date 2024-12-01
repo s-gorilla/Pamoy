@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #0c0c0c;
@@ -609,6 +613,12 @@ a:focus {
 .footer_section a {
   color: #ffffff;
 }
+
+.center-content {
+  text-align: center; /* Centers text horizontally */
+  margin: 0 auto;     /* Centers the container */
+}
+
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
