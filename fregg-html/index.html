@@ -53,27 +53,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <div class="d-flex flex-column flex-lg-row align-items-center ml-auto">
                 <ul class="navbar-nav">
-                  <!-- Link to Home Section -->
-                  <li class="active nav-item">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <!-- Link to About Section -->
                   <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#home">Beranda <span class="sr-only">(current)</span></a>
                   </li>
-                  <!-- Link to Service Section -->
                   <li class="nav-item">
-                    <a class="nav-link" href="#services">Service</a>
+                    <a class="nav-link" href="#about">Tentang</a>
                   </li>
-                  <!-- Link to Contact Section -->
                   <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact us</a>
+                    <a class="nav-link" href="#services">Layanan</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Hubungi Kami</a>
                   </li>
                 </ul>
-                <!-- Optional Search Button -->
-                <form class="form-inline">
-                  <button class="my-2 my-sm-0 nav_search-btn btn" type="submit"></button>
-                </form>
               </div>
             </div>
           </nav>
@@ -81,7 +73,6 @@
       </header>
     </section>
     <!-- end header section -->
-
 
     <!-- slider section -->
     <section class="position-relative slider_section">
@@ -98,7 +89,7 @@
                 <div class="col-md-7">
                   <div class="detail-box">
                     <div>
-                      <h1>Welcome to<br><span>PT. LINGGA PRABA NUSANTARA</span></h1>
+                      <h1>Selamat datang di<br><span>PT. LINGGA PRABA NUSANTARA</span></h1>
                       <p>Mewujudkan konsep-konsep strategis dan sistematis sejalan dengan keinginan pelanggan di bidang digital advertising dan transportasi.</p>
                       <div class="btn-box">
                         <a href="#contact" class="btn-1">
@@ -119,9 +110,9 @@
                   <div class="detail-box">
                     <div>
                       <h1>
-                        Leading the Way in <br>
+                        Menjadi yang Terdepan dalam <br>
                         <span>
-                          Digital Transformation
+                          Transformasi Digital
                         </span>
                       </h1>
                       <p>
@@ -248,7 +239,7 @@
           <div class="row">
             <!-- Service 5: Pelayanan dan Pengadaan Jasa Lainnya -->
             <div class="col-md-12">
-              <div class="container center-content text-center">
+              <div class="text-right align-items-end align-items-md-start text-md-left box">
                 <div class="img-box">
                   <img src="images/other-services.png" alt="Pelayanan dan Pengadaan Jasa Lainnya" height="100">
                 </div>
@@ -259,30 +250,8 @@
           </div>
         </div>
       </section>
-
-    <section class="layout_padding quote_section">
-      <div class="container">
-        <div class="box">
-          <div class="detail-box">
-            <h3>
-              Siap Mengembangkan Bisnis Anda?
-            </h3>
-            <p>
-              Hubungi kami sekarang untuk mendapatkan penawaran khusus terkait proyek digitalisasi, transportasi, atau layanan lainnya. Kami siap membantu Anda menciptakan inovasi dan mencapai pertumbuhan yang berkelanjutan.
-            </p>
-          </div>
-          <div class="btn-box">
-            <a href="#contact">
-              Dapatkan Penawaran
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>    
-
-
     <!-- contact section -->
-
+    </div>
     <section id="contact" class="contact_section">
       <div class="container">
         <div class="heading_container">
@@ -395,8 +364,74 @@
       // Buka Gmail di tab baru dengan template email yang sudah diperbarui
       window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email_tujuan}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`);
     });
+
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header_section');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header_section');
+      const aboutSection = document.querySelector('#about');
+      
+      const aboutSectionTop = aboutSection.getBoundingClientRect().top;
+      
+      // When scrolling past the about section, make the navbar white transparent
+      if (window.scrollY > aboutSectionTop - 100) {  // Add some offset
+        header.classList.add('white-bg');
+      } else {
+        header.classList.remove('white-bg');
+      }
+    });
+
+    // Function to handle navbar link clicks and apply 'active' class
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Function to update active link on click
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        // Remove 'active' class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // Add 'active' class to the clicked link
+        this.classList.add('active');
+      });
+    });
+
+    // Function to update active link based on scroll position
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+      sections.forEach(section => {
+        let sectionTop = section.offsetTop - 80;  // Offset to account for the navbar height
+        let sectionHeight = section.offsetHeight;
+
+        // Check if scroll position is within the current section
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          const currentId = section.getAttribute('id');
+          const activeLink = document.querySelector(`.navbar-nav .nav-link[href="#${currentId}"]`);
+
+          // Remove 'active' class from all links
+          navLinks.forEach(link => link.classList.remove('active'));
+
+          // Add 'active' class to the corresponding link
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+
+      // Handle the "Home" section: Make the Home link active when at the top of the page
+      if (scrollPosition < document.querySelector('#about').offsetTop - 80) {
+        document.querySelector('.navbar-nav .nav-link[href="#home"]').classList.add('active');
+      }
+    });
   </script>
-  
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>

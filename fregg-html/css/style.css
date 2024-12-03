@@ -1,3 +1,4 @@
+/* Smooth scroll effect for section links */
 html {
   scroll-behavior: smooth;
 }
@@ -56,6 +57,48 @@ body {
   height: auto;
 }
 
+/* Ensure header doesn't overlap the content */
+.home_section {
+  padding-top: 120px; /* Adjust depending on your navbar height */
+}
+
+/* Ensure the navbar is fixed at the top */
+.header_section {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.header_section.scrolled {
+  background-color: rgba(255, 255, 255, 0.8); /* Lighter background when scrolling */
+}
+
+.header_section.white-bg {
+  background-color: rgba(255, 255, 255, 0.8); /* White transparent when scrolling */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for contrast */
+}
+
+.header_section.white-bg .navbar-brand span {
+  color: #ffffff; /* Dark logo text on white background */
+}
+
+.header_section.white-bg .navbar-toggler {
+  background-color: #000; /* Black toggler button for mobile on white background */
+}
+
+.header_section.white-bg .navbar-nav .nav-link {
+  color: #0c0c0c; /* Dark text on white background */
+}
+
+/* Sticky effect when scrolling */
+.header_section.scrolled {
+  background-color: rgba(0, 0, 0, 0.95); /* Darker background when scrolled */
+}
+
 .header_section .container-fluid {
   padding-right: 25px;
   padding-left: 25px;
@@ -63,6 +106,33 @@ body {
 
 .header_section .nav_container {
   margin: 0 auto;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ffffff; /* Default link color */
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Active link styling */
+.navbar-nav .nav-item .nav-link.active {
+  background-color: #e93f1a; /* Highlight the active link */
+  color: #fff;
+  border-radius: 4px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #e93f1a;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+  background-color: #e93f1a; /* Highlight color on hover and active */
+  color: #ffffff;
+  border-radius: 4px;
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link {
@@ -117,7 +187,7 @@ a:focus {
 
 .navbar-brand span {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -126,6 +196,18 @@ a:focus {
   z-index: 99999;
   padding: 15px 0;
 }
+
+/* Responsive navbar for mobile */
+.navbar-toggler {
+  background-color: #ffffff;
+  border: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url(../images/menu.png); /* Icon for mobile menu */
+  background-size: 24px;
+}
+
 
 .custom_nav-container .navbar-toggler {
   outline: none;
@@ -612,11 +694,6 @@ a:focus {
 
 .footer_section a {
   color: #ffffff;
-}
-
-.center-content {
-  text-align: center; /* Centers text horizontally */
-  margin: 0 auto;     /* Centers the container */
 }
 
 
