@@ -68,30 +68,42 @@ body {
   top: 0;
   width: 100%;
   z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent background */
   transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0); /* Optional shadow */
 }
 
 .header_section.scrolled {
-  background-color: rgba(255, 255, 255, 0.8); /* Lighter background when scrolling */
+  background-color: rgb(255, 255, 255); /* Lighter background when scrolling */
 }
 
 .header_section.white-bg {
-  background-color: rgba(255, 255, 255, 0.8); /* White transparent when scrolling */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for contrast */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header_section.white-bg .navbar-brand span {
-  color: #ffffff; /* Dark logo text on white background */
+  color: #0c0c0c; /* Dark logo text on white background */
 }
 
 .header_section.white-bg .navbar-toggler {
-  background-color: #000; /* Black toggler button for mobile on white background */
+  background-color: #000; /* Black toggler button for mobile */
 }
 
-.header_section.white-bg .navbar-nav .nav-link {
-  color: #0c0c0c; /* Dark text on white background */
+.header_section.white-bg .navbar-nav .nav-item .nav-link {
+  color: #0c0c0c !important; /* Dark text for normal links */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover and active link text color */
+.header_section.white-bg .navbar-nav .nav-item .nav-link:hover,
+.header_section.white-bg .navbar-nav .nav-item .nav-link.active {
+  color: #ffffff !important; /* White text when active or hovered */
+}
+
+/* Active link specifically when scrolling */
+.header_section.white-bg .navbar-nav .nav-item .nav-link.active {
+  color: #ffffff !important; /* Ensure active link text is white when scrolling */
 }
 
 /* Sticky effect when scrolling */
@@ -199,7 +211,7 @@ a:focus {
 
 /* Responsive navbar for mobile */
 .navbar-toggler {
-  background-color: #ffffff;
+  background-color: #000;
   border: none;
 }
 
