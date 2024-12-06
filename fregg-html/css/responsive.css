@@ -63,9 +63,17 @@
     .client_section .client_container {
         width: 100%;
     }
+
+    .navbar-brand img {
+        width: 45px; /* Slightly smaller on tablets */
+      }    
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 40px; /* Smaller on mobile devices */
+    }
+}
 
 @media (max-width: 480px) {
     .info_section .footer_contact {
